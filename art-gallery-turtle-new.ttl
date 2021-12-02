@@ -1,0 +1,2031 @@
+@prefix : <http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery> .
+
+<http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#designed_by
+:designed_by rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Artwork ;
+             rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_artist
+:has_artist rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_artwork
+:has_artwork rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Artist ;
+             rdfs:range :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_gender
+:has_gender rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Gender .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_nationality
+:has_nationality rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#DateOfAcquiring
+:DateOfAcquiring rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#first_name
+:first_name rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Person .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_BirthYear
+:has_BirthYear rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Person .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_DeathYear
+:has_DeathYear rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Person .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_Dimensions
+:has_Dimensions rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_Title
+:has_Title rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#has_medium
+:has_medium rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#last_name
+:last_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Person .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Artist
+:Artist rdf:type owl:Class ;
+        rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Artwork
+:Artwork rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Female
+:Female rdf:type owl:Class ;
+        rdfs:subClassOf :Gender .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Gelatin
+:Gelatin rdf:type owl:Class ;
+         rdfs:subClassOf :Medium .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Gender
+:Gender rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Graphite
+:Graphite rdf:type owl:Class ;
+          rdfs:subClassOf :Medium .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Ink
+:Ink rdf:type owl:Class ;
+     rdfs:subClassOf :Medium .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Male
+:Male rdf:type owl:Class ;
+      rdfs:subClassOf :Gender .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Nationality
+:Nationality rdf:type owl:Class ;
+             rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Pen
+:Pen rdf:type owl:Class ;
+     rdfs:subClassOf :Medium .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#American
+:American rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Argentine
+:Argentine rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Belgian
+:Belgian rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#British
+:British rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Colombian
+:Colombian rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Danish
+:Danish rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Estonian
+:Estonian rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Finnish
+:Finnish rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#French
+:French rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#German
+:German rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Guatemalan
+:Guatemalan rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Israeli
+:Israeli rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Italian
+:Italian rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Japanese
+:Japanese rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Kuwaiti
+:Kuwaiti rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Mexican
+:Mexican rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Polish
+:Polish rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Romanian
+:Romanian rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Russian
+:Russian rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Spanish
+:Spanish rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Swedish
+:Swedish rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#Various
+:Various rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_1
+:artist_1 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_1 ;
+          :has_nationality :American ;
+          :has_BirthYear "1930"^^xsd:string ;
+          :has_DeathYear "1992"^^xsd:string ;
+          :name "Otto Wagner"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_10
+:artist_10 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_10 ;
+           :has_nationality :French ;
+           :has_BirthYear "1886"^^xsd:string ;
+           :has_DeathYear "1940"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_11
+:artist_11 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_11 ;
+           :has_nationality :Estonian ;
+           :has_BirthYear "1936"^^xsd:string ;
+           :has_DeathYear "2000"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_12
+:artist_12 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_12 ;
+           :has_nationality :Mexican ;
+           :has_BirthYear "1911"^^xsd:string ;
+           :has_DeathYear "1976"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_13
+:artist_13 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_13 ;
+           :has_nationality :Swedish ;
+           :has_BirthYear "1907"^^xsd:string ;
+           :has_DeathYear "1949"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_14
+:artist_14 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_14 ;
+           :has_nationality :Spanish ;
+           :has_BirthYear "1900"^^xsd:string ;
+           :has_DeathYear "2008"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_15
+:artist_15 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_15 ;
+           :has_nationality :American ;
+           :has_BirthYear "1923"^^xsd:string ;
+           :has_DeathYear "1973"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_16
+:artist_16 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_16 ;
+           :has_nationality :American ;
+           :has_BirthYear "1926"^^xsd:string ;
+           :has_DeathYear "1953"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_17
+:artist_17 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_17 ;
+           :has_nationality :Israeli ;
+           :has_BirthYear "1863"^^xsd:string ;
+           :has_DeathYear "1991"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_18
+:artist_18 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_18 ;
+           :has_nationality :British ;
+           :has_BirthYear "1927"^^xsd:string ;
+           :has_DeathYear "1971"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_19
+:artist_19 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_19 ;
+           :has_nationality :American ;
+           :has_BirthYear "1867"^^xsd:string ;
+           :has_DeathYear "2010"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_2
+:artist_2 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_2 ;
+          :has_nationality :Spanish ;
+          :has_BirthYear "1936"^^xsd:string ;
+          :has_DeathYear "1966"^^xsd:string ;
+          :name "Christian de Portzamparc"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_20
+:artist_20 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_20 ;
+           :has_nationality :American ;
+           :has_BirthYear "1940"^^xsd:string ;
+           :has_DeathYear "2011"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_21
+:artist_21 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_21 ;
+           :has_nationality :Swedish ;
+           :has_BirthYear "1885"^^xsd:string ;
+           :has_DeathYear "2007"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_22
+:artist_22 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_22 ;
+           :has_nationality :Swedish ;
+           :has_BirthYear "1923"^^xsd:string ;
+           :has_DeathYear "1994"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_23
+:artist_23 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_23 ;
+           :has_nationality :French ;
+           :has_BirthYear "1926"^^xsd:string ;
+           :has_DeathYear "1967"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_24
+:artist_24 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_24 ;
+           :has_nationality :Italian ;
+           :has_BirthYear "1941"^^xsd:string ;
+           :has_DeathYear "1881"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_25
+:artist_25 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_25 ;
+           :has_nationality :American ;
+           :has_BirthYear "1898"^^xsd:string ;
+           :has_DeathYear "1984"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_26
+:artist_26 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_26 ;
+           :has_nationality :French ;
+           :has_BirthYear "1894"^^xsd:string ;
+           :has_DeathYear "2002"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_27
+:artist_27 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_27 ;
+           :has_nationality :American ;
+           :has_BirthYear "1932"^^xsd:string ;
+           :has_DeathYear "1951"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_28
+:artist_28 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_28 ;
+           :has_nationality :Finnish ;
+           :has_BirthYear "1921"^^xsd:string ;
+           :has_DeathYear "1966"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_29
+:artist_29 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_29 ;
+           :has_nationality :Finnish ;
+           :has_BirthYear "1930"^^xsd:string ;
+           :has_DeathYear "1988"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_3
+:artist_3 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_3 ;
+          :has_nationality :American ;
+          :has_BirthYear "1941"^^xsd:string ;
+          :has_DeathYear "1995"^^xsd:string ;
+          :name "Emil Hoppe"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_30
+:artist_30 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_30 ;
+           :has_nationality :Finnish ;
+           :has_BirthYear "1883"^^xsd:string ;
+           :has_DeathYear "2002"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_31
+:artist_31 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_31 ;
+           :has_nationality :American ;
+           :has_BirthYear "1888"^^xsd:string ;
+           :has_DeathYear "1949"^^xsd:string ;
+           :name "Louis I. Kahn"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_32
+:artist_32 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_32 ;
+           :has_nationality :Polish ;
+           :has_BirthYear "1898"^^xsd:string ;
+           :has_DeathYear "2000"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_33
+:artist_33 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_33 ;
+           :has_nationality :American ;
+           :has_BirthYear "1913"^^xsd:string ;
+           :has_DeathYear "1987"^^xsd:string ;
+           :name "Marcel Kammerer"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_34
+:artist_34 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_34 ;
+           :has_nationality :British ;
+           :has_BirthYear "1900"^^xsd:string ;
+           :has_DeathYear "1976"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_35
+:artist_35 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_35 ;
+           :has_nationality :American ;
+           :has_BirthYear "1937"^^xsd:string ;
+           :has_DeathYear "1978"^^xsd:string ;
+           :name "Otto Sch√∂nthal"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_36
+:artist_36 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_36 ;
+           :has_nationality :Japanese ;
+           :has_BirthYear "1934"^^xsd:string ;
+           :has_DeathYear "1993"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_37
+:artist_37 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_37 ;
+           :has_nationality :Japanese ;
+           :has_BirthYear "1933"^^xsd:string ;
+           :has_DeathYear "1894"^^xsd:string ;
+           :name "Otto Sch√∂nthal"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_38
+:artist_38 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_38 ;
+           :has_nationality :American ;
+           :has_BirthYear "1935"^^xsd:string ;
+           :has_DeathYear "2013"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_39
+:artist_39 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_39 ;
+           :has_nationality :American ;
+           :has_BirthYear "1928"^^xsd:string ;
+           :has_DeathYear "1978"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_4
+:artist_4 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_4 ;
+          :has_nationality :American ;
+          :has_BirthYear "1946"^^xsd:string ;
+          :has_DeathYear "1997"^^xsd:string ;
+          :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_40
+:artist_40 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_40 ;
+           :has_nationality :American ;
+           :has_BirthYear "1920"^^xsd:string ;
+           :has_DeathYear "1991"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_41
+:artist_41 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_41 ;
+           :has_nationality :British ;
+           :has_BirthYear "1933"^^xsd:string ;
+           :has_DeathYear "1999"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_42
+:artist_42 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_42 ;
+           :has_nationality :British ;
+           :has_BirthYear "1940"^^xsd:string ;
+           :has_DeathYear "1988"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_43
+:artist_43 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_43 ;
+           :has_nationality :American ;
+           :has_BirthYear "1915"^^xsd:string ;
+           :has_DeathYear "1975"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_44
+:artist_44 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_44 ;
+           :has_nationality :Guatemalan ;
+           :has_BirthYear "1904"^^xsd:string ;
+           :has_DeathYear "1996"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_45
+:artist_45 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_45 ;
+           :has_nationality :American ;
+           :has_BirthYear "1904"^^xsd:string ;
+           :has_DeathYear "1969"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_46
+:artist_46 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_46 ;
+           :has_nationality :American ;
+           :has_BirthYear "1818"^^xsd:string ;
+           :has_DeathYear "1994"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_47
+:artist_47 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_47 ;
+           :has_nationality :British ;
+           :has_BirthYear "1935"^^xsd:string ;
+           :has_DeathYear "1976"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_48
+:artist_48 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_48 ;
+           :has_nationality :Colombian ;
+           :has_BirthYear "1902"^^xsd:string ;
+           :has_DeathYear "2012"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_49
+:artist_49 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_49 ;
+           :has_nationality :French ;
+           :has_BirthYear "1930"^^xsd:string ;
+           :has_DeathYear "1983"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_5
+:artist_5 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_5 ;
+          :has_nationality :Danish ;
+          :has_BirthYear "1941"^^xsd:string ;
+          :has_DeathYear "1964"^^xsd:string ;
+          :name "Emil Hoppe"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_50
+:artist_50 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_50 ;
+           :has_nationality :French ;
+           :has_BirthYear "1918"^^xsd:string ;
+           :has_DeathYear "2008"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_51
+:artist_51 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_51 ;
+           :has_nationality :Italian ;
+           :has_BirthYear "1864"^^xsd:string ;
+           :has_DeathYear "1992"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_52
+:artist_52 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_52 ;
+           :has_nationality :American ;
+           :has_BirthYear "1948"^^xsd:string ;
+           :has_DeathYear "1969"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_53
+:artist_53 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_53 ;
+           :has_nationality :American ;
+           :has_BirthYear "1897"^^xsd:string ;
+           :has_DeathYear "1984"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_54
+:artist_54 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_54 ;
+           :has_nationality :American ;
+           :has_BirthYear "1937"^^xsd:string ;
+           :has_DeathYear "1989"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_55
+:artist_55 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_55 ;
+           :has_nationality :British ;
+           :has_BirthYear "1950"^^xsd:string ;
+           :has_DeathYear "1959"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_56
+:artist_56 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_56 ;
+           :has_nationality :American ;
+           :has_BirthYear "1912"^^xsd:string ;
+           :has_DeathYear "1996"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_57
+:artist_57 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_57 ;
+           :has_nationality :American ;
+           :has_BirthYear "1916"^^xsd:string ;
+           :has_DeathYear "1989"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_58
+:artist_58 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_58 ;
+           :has_nationality :American ;
+           :has_BirthYear "1895"^^xsd:string ;
+           :has_DeathYear "2003"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_59
+:artist_59 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_59 ;
+           :has_nationality :American ;
+           :has_BirthYear "1915"^^xsd:string ;
+           :has_DeathYear "1969"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_6
+:artist_6 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_6 ;
+          :has_nationality :Italian ;
+          :has_BirthYear "1925"^^xsd:string ;
+          :has_DeathYear "2013"^^xsd:string ;
+          :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_60
+:artist_60 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_60 ;
+           :has_nationality :American ;
+           :has_BirthYear "1910"^^xsd:string ;
+           :has_DeathYear "2002"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_61
+:artist_61 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_61 ;
+           :has_nationality :American ;
+           :has_BirthYear "1927"^^xsd:string ;
+           :has_DeathYear "1936"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_62
+:artist_62 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_62 ;
+           :has_nationality :Polish ;
+           :has_BirthYear "1948"^^xsd:string ;
+           :has_DeathYear "2011"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_63
+:artist_63 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_63 ;
+           :has_nationality :American ;
+           :has_BirthYear "1912"^^xsd:string ;
+           :has_DeathYear "2006"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_64
+:artist_64 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_64 ;
+           :has_nationality :Romanian ;
+           :has_BirthYear "1928"^^xsd:string ;
+           :has_DeathYear "1961"^^xsd:string ;
+           :name "Hans Poelzig"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_65
+:artist_65 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_65 ;
+           :has_nationality :British ;
+           :has_BirthYear "1896"^^xsd:string ;
+           :has_DeathYear "1998"^^xsd:string ;
+           :name "Raimund Abraham"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_66
+:artist_66 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_66 ;
+           :has_nationality :American ;
+           :has_BirthYear "1945"^^xsd:string ;
+           :has_DeathYear "1980"^^xsd:string ;
+           :name "Peter Eisenman, Robert Cole"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_67
+:artist_67 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_67 ;
+           :has_nationality :Italian ;
+           :has_BirthYear "1913"^^xsd:string ;
+           :has_DeathYear "1982"^^xsd:string ;
+           :name "Rem Koolhaas, Madelon Vriesendorp"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_68
+:artist_68 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_68 ;
+           :has_nationality :Russian ;
+           :has_BirthYear "1827"^^xsd:string ;
+           :has_DeathYear "1971"^^xsd:string ;
+           :name "Roger C. Ferri"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_69
+:artist_69 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_69 ;
+           :has_nationality :Israeli ;
+           :has_BirthYear "1937"^^xsd:string ;
+           :has_DeathYear "1989"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_7
+:artist_7 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_7 ;
+          :has_nationality :American ;
+          :has_BirthYear "1941"^^xsd:string ;
+          :has_DeathYear "2013"^^xsd:string ;
+          :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_70
+:artist_70 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_70 ;
+           :has_nationality :American ;
+           :has_BirthYear "1904"^^xsd:string ;
+           :has_DeathYear "1982"^^xsd:string ;
+           :name "Roger C. Ferri"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_71
+:artist_71 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_71 ;
+           :has_nationality :American ;
+           :has_BirthYear "1922"^^xsd:string ;
+           :has_DeathYear "1877"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_72
+:artist_72 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_72 ;
+           :has_nationality :American ;
+           :has_BirthYear "1901"^^xsd:string ;
+           :has_DeathYear "1956"^^xsd:string ;
+           :name "Roger C. Ferri"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_73
+:artist_73 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_73 ;
+           :has_nationality :French ;
+           :has_BirthYear "1908"^^xsd:string ;
+           :has_DeathYear "1996"^^xsd:string ;
+           :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_74
+:artist_74 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_74 ;
+           :has_nationality :American ;
+           :has_BirthYear "1906"^^xsd:string ;
+           :has_DeathYear "1999"^^xsd:string ;
+           :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_75
+:artist_75 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_75 ;
+           :has_nationality :Finnish ;
+           :has_BirthYear "1928"^^xsd:string ;
+           :has_DeathYear "2006"^^xsd:string ;
+           :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_76
+:artist_76 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_76 ;
+           :has_nationality :German ;
+           :has_BirthYear "1940"^^xsd:string ;
+           :has_DeathYear "1953"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_77
+:artist_77 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_77 ;
+           :has_nationality :American ;
+           :has_BirthYear "1942"^^xsd:string ;
+           :has_DeathYear "1984"^^xsd:string ;
+           :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_78
+:artist_78 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_78 ;
+           :has_nationality :American ;
+           :has_BirthYear "1939"^^xsd:string ;
+           :has_DeathYear "1879"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_79
+:artist_79 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_79 ;
+           :has_nationality :British ;
+           :has_BirthYear "1887"^^xsd:string ;
+           :has_DeathYear "2006"^^xsd:string ;
+           :name "Aldo Rossi, Gianni Braghieri, M. Bosshard"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_8
+:artist_8 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_8 ;
+          :has_nationality :American ;
+          :has_BirthYear "1923"^^xsd:string ;
+          :has_DeathYear "1942"^^xsd:string ;
+          :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_80
+:artist_80 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_80 ;
+           :has_nationality :Argentine ;
+           :has_BirthYear "1899"^^xsd:string ;
+           :has_DeathYear "1996"^^xsd:string ;
+           :name "Ludwig Mies van der Rohe"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_81
+:artist_81 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_81 ;
+           :has_nationality :Japanese ;
+           :has_BirthYear "1888"^^xsd:string ;
+           :has_DeathYear "1946"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_82
+:artist_82 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_82 ;
+           :has_nationality :Japanese ;
+           :has_BirthYear "1943"^^xsd:string ;
+           :has_DeathYear "1887"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_83
+:artist_83 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_83 ;
+           :has_nationality :Kuwaiti ;
+           :has_BirthYear "1897"^^xsd:string ;
+           :has_DeathYear "2013"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_84
+:artist_84 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_84 ;
+           :has_nationality :German ;
+           :has_BirthYear "1917"^^xsd:string ;
+           :has_DeathYear "1993"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_85
+:artist_85 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_85 ;
+           :has_nationality :American ;
+           :has_BirthYear "1910"^^xsd:string ;
+           :has_DeathYear "2006"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_86
+:artist_86 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_86 ;
+           :has_nationality :American ;
+           :has_BirthYear "1943"^^xsd:string ;
+           :has_DeathYear "2010"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_87
+:artist_87 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_87 ;
+           :has_nationality :American ;
+           :has_BirthYear "1927"^^xsd:string ;
+           :has_DeathYear "1971"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_88
+:artist_88 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_88 ;
+           :has_nationality :American ;
+           :has_BirthYear "1939"^^xsd:string ;
+           :has_DeathYear "1964"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_89
+:artist_89 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_89 ;
+           :has_nationality :American ;
+           :has_BirthYear "1928"^^xsd:string ;
+           :has_DeathYear "1992"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_9
+:artist_9 rdf:type owl:NamedIndividual ,
+                   :Artist ;
+          :has_artwork :artwork_9 ;
+          :has_nationality :American ;
+          :has_BirthYear "1918"^^xsd:string ;
+          :has_DeathYear "1941"^^xsd:string ;
+          :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_90
+:artist_90 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_90 ;
+           :has_nationality :Various ;
+           :has_BirthYear "1941"^^xsd:string ;
+           :has_DeathYear "1985"^^xsd:string ;
+           :name "Y"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_91
+:artist_91 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_91 ;
+           :has_nationality :American ;
+           :has_BirthYear "1890"^^xsd:string ;
+           :has_DeathYear "1966"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_92
+:artist_92 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_92 ;
+           :has_nationality :American ;
+           :has_BirthYear "1900"^^xsd:string ;
+           :has_DeathYear "2010"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_93
+:artist_93 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_93 ;
+           :has_nationality :American ;
+           :has_BirthYear "1936"^^xsd:string ;
+           :has_DeathYear "1995"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_94
+:artist_94 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_94 ;
+           :has_nationality :British ;
+           :has_BirthYear "1902"^^xsd:string ;
+           :has_DeathYear "2005"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_95
+:artist_95 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_95 ;
+           :has_nationality :Belgian ;
+           :has_BirthYear "1964"^^xsd:string ;
+           :has_DeathYear "2002"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_96
+:artist_96 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_96 ;
+           :has_nationality :American ;
+           :has_BirthYear "1943"^^xsd:string ;
+           :has_DeathYear "1953"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_97
+:artist_97 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_97 ;
+           :has_nationality :Italian ;
+           :has_BirthYear "1890"^^xsd:string ;
+           :has_DeathYear "1973"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_98
+:artist_98 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_98 ;
+           :has_nationality :American ;
+           :has_BirthYear "1929"^^xsd:string ;
+           :has_DeathYear "2012"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artist_99
+:artist_99 rdf:type owl:NamedIndividual ,
+                    :Artist ;
+           :has_artwork :artwork_99 ;
+           :has_nationality :Italian ;
+           :has_BirthYear "1914"^^xsd:string ;
+           :has_DeathYear "1976"^^xsd:string ;
+           :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_1
+:artwork_1 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "19 1/8 x 66 1/2\" (48.6 x 168.9 cm)"^^xsd:string ;
+           :has_Title "Ferdinandsbr√ºcke Project, Vienna, Austria, Elevation, preliminary version"^^xsd:string ;
+           :name "Otto Wagner"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_10
+:artwork_10 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_11
+:artwork_11 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_12
+:artwork_12 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_13
+:artwork_13 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_14
+:artwork_14 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_15
+:artwork_15 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_16
+:artwork_16 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_17
+:artwork_17 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_18
+:artwork_18 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_19
+:artwork_19 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_2
+:artwork_2 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "16 x 11 3/4\" (40.6 x 29.8 cm)"^^xsd:string ;
+           :has_Title "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard"^^xsd:string ;
+           :name "Christian de Portzamparc"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_20
+:artwork_20 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_21
+:artwork_21 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_22
+:artwork_22 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_23
+:artwork_23 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_24
+:artwork_24 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_25
+:artwork_25 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_26
+:artwork_26 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_27
+:artwork_27 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_28
+:artwork_28 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_29
+:artwork_29 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_3
+:artwork_3 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "13 1/2 x 12 1/2\" (34.3 x 31.8 cm)"^^xsd:string ;
+           :has_Title "Villa near Vienna Project, Outside Vienna, Austria, Elevation"^^xsd:string ;
+           :name "Emil Hoppe"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_30
+:artwork_30 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_31
+:artwork_31 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "44 1/2 x 66\" (113 x 167.6 cm)"^^xsd:string ;
+            :has_Title "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier"^^xsd:string ;
+            :name "Louis I. Kahn"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_32
+:artwork_32 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "20 x 20\" (50.8 X 50.8 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 2: The Street (Border Crossing)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_33
+:artwork_33 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "18 7/8 x 12 3/8\" (47.9 x 31.4 cm)"^^xsd:string ;
+            :has_Title "Royal Hunting Tent, project, Exterior perspective"^^xsd:string ;
+            :name "Marcel Kammerer"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_34
+:artwork_34 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "24 x 322\" (61 x 817.9 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 2: The Street (Border Crossing)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_35
+:artwork_35 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "12 x 8 1/2\" (30.5 x 21.6 cm)"^^xsd:string ;
+            :has_Title "House in Krems, project, Krems, Austria, Elevation"^^xsd:string ;
+            :name "Otto Sch√∂nthal"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_36
+:artwork_36 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "20 x 20\"(50.8 x 50.8 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_37
+:artwork_37 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "11 5/8 x 14 1/8\" (29.6 x 35.8 cm)"^^xsd:string ;
+            :has_Title "Imperial Post Office, Teschen, Austria (Elevation)"^^xsd:string ;
+            :name "Otto Sch√∂nthal"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_38
+:artwork_38 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_39
+:artwork_39 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "Each: 48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_4
+:artwork_4 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "20 x 20\" (50.8 x 50.8 cm)"^^xsd:string ;
+           :has_Title "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_40
+:artwork_40 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_41
+:artwork_41 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_42
+:artwork_42 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_43
+:artwork_43 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_44
+:artwork_44 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_45
+:artwork_45 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_46
+:artwork_46 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_47
+:artwork_47 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "48 x 24\" (121.9 x 61 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_48
+:artwork_48 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "Each: 20 x 20\" (50.8 x 50.8 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_49
+:artwork_49 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_5
+:artwork_5 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "15 1/8 x 7 1/2\" (38.4 x 19.1 cm)"^^xsd:string ;
+           :has_Title "Villa, project, outside Vienna, Austria, Exterior perspective"^^xsd:string ;
+           :name "Emil Hoppe"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_50
+:artwork_50 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "Each: 19 x 31\" (48.2 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_51
+:artwork_51 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_52
+:artwork_52 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_53
+:artwork_53 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_54
+:artwork_54 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_55
+:artwork_55 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_56
+:artwork_56 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_57
+:artwork_57 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_58
+:artwork_58 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_59
+:artwork_59 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York , Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_6
+:artwork_6 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+           :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_60
+:artwork_60 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_61
+:artwork_61 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_62
+:artwork_62 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_63
+:artwork_63 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "19 x 31\" (48.3 x 78.7 cm)"^^xsd:string ;
+            :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_64
+:artwork_64 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "14 5/8 x 16 1/8\" (37.1 x 41 cm)"^^xsd:string ;
+            :has_Title "Concert Hall Project, Dresden, Germany (Interior perspective of preliminary scheme)"^^xsd:string ;
+            :name "Hans Poelzig"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_65
+:artwork_65 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "34 3/8 x 53 1/2\" (87.3 x 135.9 cm)"^^xsd:string ;
+            :has_Title "Earth-Cloud House, project"^^xsd:string ;
+            :name "Raimund Abraham"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_66
+:artwork_66 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "13 3/4 x 44 5/8\" (34.9 x 113.3 cm)"^^xsd:string ;
+            :has_Title "House IV Transformation Study, project, Falls Village, Connecticut, Multiple axonometrics"^^xsd:string ;
+            :name "Peter Eisenman, Robert Cole"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_67
+:artwork_67 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "25 x 39\" (63.5 x 99.1 cm)"^^xsd:string ;
+            :has_Title "Villa dall'Ava, Paris (Saint-Cloud), France, Exterior perspective"^^xsd:string ;
+            :name "Rem Koolhaas, Madelon Vriesendorp"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_68
+:artwork_68 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "55 3/4\" x 43 5/8\" (141.6 x 110.8 cm)"^^xsd:string ;
+            :has_Title "Pedestrian City, Hypostyle Courtyard Project, Structural details"^^xsd:string ;
+            :name "Roger C. Ferri"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_69
+:artwork_69 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "37 3/16 x 37 5/16\" (94.5 x 94.8 cm)"^^xsd:string ;
+            :has_Title "Parc de la Villette, Le Case Vide, Paris, France, Axonometric of folly"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_7
+:artwork_7 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "Each: 14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+           :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_70
+:artwork_70 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "55 3/4 x 43 5/8\" (141.6 x 110.8 cm)"^^xsd:string ;
+            :has_Title "Pedestrian City, Hypostyle Courtyard, project, Developed plan and section elevations"^^xsd:string ;
+            :name "Roger C. Ferri"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_71
+:artwork_71 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "27 1/4 x 39 1/4\" (69.2 x 99.7 cm)"^^xsd:string ;
+            :has_Title "Parc de la Villette, Paris, France, Aerial perspective of follies"^^xsd:string ;
+            :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_72
+:artwork_72 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "44 3/8 x 44 5/8\" (112.7 x 113.3 cm)"^^xsd:string ;
+            :has_Title "Pedestrian City, Hypostyle Courtyard, project, Perspective"^^xsd:string ;
+            :name "Roger C. Ferri"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_73
+:artwork_73 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "11 7/8 x 11 7/8\" (30.2 x 30.2 cm)"^^xsd:string ;
+            :has_Title "Fargo-Moorhead Cultural Center Bridge, project, Fargo, North Dakota and Moorhead, Minnesota, South elevation"^^xsd:string ;
+            :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_74
+:artwork_74 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "23 1/2 x 23 5/8\" (59.7 x 60 cm)"^^xsd:string ;
+            :has_Title "Vacation House Project, Aspen, Colorado, Elevations, interior and exterior perspectives and plan"^^xsd:string ;
+            :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_75
+:artwork_75 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "10 7/8 x 10 3/4\" (27.6 x 27.3 cm)"^^xsd:string ;
+            :has_Title "French & Company, project, New York (Manhattan), New York, Facade study"^^xsd:string ;
+            :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_76
+:artwork_76 rdf:type owl:NamedIndividual ,
+                     :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_77
+:artwork_77 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "8 x 8\" (20.3 x 20.3 cm)"^^xsd:string ;
+            :has_Title "Vacation House, project, Aspen, Colorado, Fireplace"^^xsd:string ;
+            :name "Michael Graves"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_78
+:artwork_78 rdf:type owl:NamedIndividual ,
+                     :Artwork .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_79
+:artwork_79 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "28 1/2 x 36\" (72.4 x 91.4 cm)"^^xsd:string ;
+            :has_Title "Regional Administrative Center, project \"Trieste e una Donna.\" , Trieste, Italy, Competition design: Elevation and section"^^xsd:string ;
+            :name "Aldo Rossi, Gianni Braghieri, M. Bosshard"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_8
+:artwork_8 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+           :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_80
+:artwork_80 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Title "Misc. objects"^^xsd:string ;
+            :name "Ludwig Mies van der Rohe"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_81
+:artwork_81 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "9 1/8 x 13 3/4\" (23.2 x 34.9 cm)"^^xsd:string ;
+            :has_Title "Villa Snellman, Djursholm, Sweden, Elevation of garden facade, sketch"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_82
+:artwork_82 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "12 1/4 x 24 3/8\" (31.1 x 61.9 cm)"^^xsd:string ;
+            :has_Title "Villa Snellman, Djursholm, Sweden, Exterior elevation"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_83
+:artwork_83 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "12 1/2 x 24 1/4\" (31.8 x 61.6 cm)"^^xsd:string ;
+            :has_Title "Villa Snellman, Djursholm, Sweden, Exterior elevation"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_84
+:artwork_84 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "15 1/2 x 13 3/8\" (39.4 x 34 cm)"^^xsd:string ;
+            :has_Title "Villa Snellman, Djursholm, Sweden, Site plan"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_85
+:artwork_85 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "22 1/2 x 24 5/8\" (57.2 x 62.5 cm)"^^xsd:string ;
+            :has_Title "Villa Snellman, Djursholm, Sweden, Ground-floor plan"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_86
+:artwork_86 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "22 1/4 x 24 1/2\" (56.5 x 62.2 cm)"^^xsd:string ;
+            :has_Title "Villa Snellman, Djursholm, Sweden, Second-floor plan"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_87
+:artwork_87 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "22 3/8\" x 31 1/4\" (56.8 x 79.4 cm)"^^xsd:string ;
+            :has_Title "Skandia Cinema, Stockholm, Sweden, Elevation of front of auditorium"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_88
+:artwork_88 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "22 1/2 x 31 1/8\" (57.2 x 79.1 cm)"^^xsd:string ;
+            :has_Title "Skandia Cinema, Stockholm, Sweden, Elevation of rear of auditorium"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_89
+:artwork_89 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "18 7/8 x 21 3/4\" (47.9 x 55.2 cm)"^^xsd:string ;
+            :has_Title "Skandia Cinema, Stockholm, Sweden, Plan of ground floor"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_9
+:artwork_9 rdf:type owl:NamedIndividual ,
+                    :Artwork ;
+           :has_Dimensions "14 x 18\" (35.6 x 45.7 cm)"^^xsd:string ;
+           :has_Title "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park"^^xsd:string ;
+           :name "Bernard Tschumi"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_90
+:artwork_90 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "41.199"^^xsd:string ;
+            :has_Title " Mrs. Donald B. Marron"^^xsd:string ;
+            :name "Y"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_91
+:artwork_91 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "18 7/8 x 21 7/8\" (47.9 x 55.5 cm)"^^xsd:string ;
+            :has_Title "Skandia Cinema, Stockholm, Sweden, Floor plan of mezzanine"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_92
+:artwork_92 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "13 x 11 3/4\" (33 x 29.8 cm)"^^xsd:string ;
+            :has_Title "Skandia Cinema, Stockholm, Sweden, Perspective of staircase"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_93
+:artwork_93 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "8 1/4 x 10 1/2\" (21 x 26.7 cm)"^^xsd:string ;
+            :has_Title "Skandia Cinema, Stockholm, Sweden, Perspective of promenade"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_94
+:artwork_94 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "36 x 36 3/4\" (91.4 x 93.3 cm)"^^xsd:string ;
+            :has_Title "Public Library, Stockholm, Sweden, Elevation of front facade"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_95
+:artwork_95 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "35 3/4 x 36 5/8\" (90.8 x 93 cm)"^^xsd:string ;
+            :has_Title "Public Library, Stockholm, Sweden, Elevation of west facade"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_96
+:artwork_96 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "35 1/2 x 36 7/8\" (90.2 x 93.7 cm)"^^xsd:string ;
+            :has_Title "Public Library, Stockholm, Sweden, Section"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_97
+:artwork_97 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "35 3/4 x 35 3/4\" (90.8 x 90.8 cm)"^^xsd:string ;
+            :has_Title "Public Library, Stockholm, Sweden, Plan of first and second galleries"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_98
+:artwork_98 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "20 3/4 x 13\" (52.7 x 33 cm)"^^xsd:string ;
+            :has_Title "Stockholm Exhibition, Stockholm, Sweden, Elevation of advertising tower"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  http://www.semanticweb.org/anniedumashie/ontologies/2021/10/art-gallery#artwork_99
+:artwork_99 rdf:type owl:NamedIndividual ,
+                     :Artwork ;
+            :has_Dimensions "12 x 27 3/4\" (30.5 x 70.5 cm)"^^xsd:string ;
+            :has_Title "Law Courts Annex, Gothenburg, Sweden, Exterior elevation"^^xsd:string ;
+            :name "Erik Gunnar Asplund"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
