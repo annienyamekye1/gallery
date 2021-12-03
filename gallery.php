@@ -78,6 +78,7 @@ $nationalities = $obj->get_nationalities();
                 <div class="card-body">
                     <p class="card-text"><b>Name:</b><?php echo($row["name"]); ?></p>
                     <p class="card-text"><b>Nationality:</b><?php echo($row["nationality"]); ?></p>
+                    <p class="card-text"><b>Title:</b><?php echo($row["title"]); ?></p>
                 </div>
               </div>
             </div>
